@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package train;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.util.Random;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
+/**
+ *
+ * @author myash
+ */
+public class Login 
+{
+    public String Captcha()
+    {
+        String captcha = null;
+        char data[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','v','x','y','z','1','2','3','4','5','6','7','8','9','0'};
+        char index[] = new char[7];
+        Random r = new Random();
+        int i =0 ;
+        for( i = 0;i<(index.length);i++)
+        {
+            int rar = r.nextInt(data.length);
+            index[i] = data[rar];
+            captcha = String.valueOf(index);
+           
+    
+        }
+         return captcha;
+    }
+    public static void main(String args[])
+    {
+        Login l = new Login();
+        l.Captcha();
+    }
+}
+
+
